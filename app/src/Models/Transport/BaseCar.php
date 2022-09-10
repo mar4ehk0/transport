@@ -19,9 +19,10 @@ class BaseCar
         $this->carrying = $baseCarDTO->carrying;
     }
 
-    public function getPhotoFileExt()
+    public function getPhotoFileExt(): ?string
     {
-
+        $fileName = explode('.', $this->photoFileName);
+        return $fileName[1] ?? null;
     }
 
     public function getDescription(): string

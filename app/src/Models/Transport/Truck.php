@@ -19,8 +19,15 @@ class Truck extends BaseCar
         $this->height = $truckBodySizeDTO->height;
     }
 
+    public function getBodyVolume(): float
+    {
+        return $this->length * $this->width * $this->height;
+    }
+
     public function getDescription(): string
     {
         return parent::getDescription() . ', ' . $this->length . 'x' . $this->width . 'x' . $this->height;
     }
+
+
 }
