@@ -20,9 +20,9 @@ class TransportCreator
         }
 
         $baseCarDTO = new BaseCarDTO(
-            $item[0],
-            $item[1],
-            $item[3],
+            (string)$item[0],
+            (string)$item[1],
+            (string)$item[3],
             (float)$item[5]
         );
 
@@ -46,7 +46,7 @@ class TransportCreator
 
     private function createTruck(BaseCarDTO $baseCarDTO, array $item): Truck
     {
-        $sizeRow = $item[4];
+        $sizeRow = (string)$item[4];
         if (empty($sizeRow)) {
             $length = $width = $height = 0;
         } else {
@@ -59,6 +59,6 @@ class TransportCreator
 
     private function createSpecMachine(BaseCarDTO $baseCarDTO, array $item): SpecMachine
     {
-        return new SpecMachine($baseCarDTO, $item[6]);
+        return new SpecMachine($baseCarDTO, (string)$item[6]);
     }
 }

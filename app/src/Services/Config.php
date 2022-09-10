@@ -20,7 +20,7 @@ class Config
         }
 
         if (empty($pathConfig)) {
-            $pathConfig = $_ENV['CONFIG_PATH'];
+            $pathConfig = (string)$_ENV['CONFIG_PATH'];
         }
 
         self::$instance = new Config();

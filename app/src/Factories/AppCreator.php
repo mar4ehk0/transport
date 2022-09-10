@@ -2,7 +2,6 @@
 
 namespace Mar4ehk0\Factories;
 
-
 use Mar4ehk0\Factories\Csv\CsvFactory;
 
 class AppCreator

@@ -15,7 +15,7 @@ class AppValidator
             throw new \InvalidArgumentException('Please give me file. index.php -f filename.csv');
         }
 
-        if (file_exists($this->options['f'])) {
+        if (file_exists((string)$this->options['f'])) {
             return true;
         }
 

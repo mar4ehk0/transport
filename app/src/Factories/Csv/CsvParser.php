@@ -13,9 +13,12 @@ class CsvParser extends Parser
     {
         $generator = $this->createGenerator($file);
 
-        $collNumValid = count($generator->current());
+        /** @var array $firstRow */
+        $firstRow = $generator->current();
+        $collNumValid = count($firstRow);
         $row = 0;
 
+        /** @var array $item */
         foreach ($generator as $item) {
             if ($row !== 0) {
                 if ($this->isValidRow($collNumValid, $item)) {

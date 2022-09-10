@@ -12,7 +12,7 @@ class CsvFile implements File
     {
         $this->fileObject->setFlags(SplFileObject::SKIP_EMPTY);
 
-        $separator = config_get('CSV_SEPARATOR');
+        $separator = (string)config_get('CSV_SEPARATOR');
         $this->fileObject->setCsvControl($separator);
     }
 

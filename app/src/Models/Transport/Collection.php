@@ -7,6 +7,8 @@ class Collection implements \Iterator
 
     private int $pointer = 0;
     private int $total = 0;
+
+    /** @var BaseCar[]  */
     private array $objects = [];
 
     public function add(BaseCar $baseCar): void
@@ -20,7 +22,7 @@ class Collection implements \Iterator
         if ($num >= $this->total || $num < 0) {
             return null;
         }
-        return $this->objects[$num] ?? null;
+        return $this->objects[$num];
     }
 
     public function current(): ?BaseCar
