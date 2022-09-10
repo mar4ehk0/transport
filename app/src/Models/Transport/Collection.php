@@ -54,4 +54,9 @@ class Collection implements \Iterator
         $this->pointer = 0;
         $this->total = 0;
     }
+
+    public function count(): int
+    {
+        return $this->total;
+    }
 }
