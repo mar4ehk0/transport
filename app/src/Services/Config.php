@@ -40,7 +40,7 @@ class Config
             $dotenv = Dotenv::createImmutable($pathConfig);
             self::$options = $dotenv->load();
         } catch (\Exception $exception) {
-            echo $exception->getMessage();
+            View::showMessage($exception->getMessage());
         }
     }
 
