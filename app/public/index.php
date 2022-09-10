@@ -7,5 +7,6 @@ require __DIR__ .  '/../bootstrap/bootstrap.php';
 try {
     $app = new App();
     $app->run();
-} catch (Exception $userException) {
+} catch (Exception $exception) {
+    echo $exception->getMessage();
 }
