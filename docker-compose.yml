@@ -17,5 +17,6 @@ services:
       - "DOCKER_USER_GID"
       - "DOCKER_GROUP_NAME"
       - "SRC_PATH"
+      - "CONFIG_PATH"
     volumes:
       - ./app:${SRC_PATH}:rw
