@@ -13,4 +13,9 @@ class SpecMachine extends BaseCar
         parent::__construct($baseCarDTO);
         $this->extra = $extra;
     }
+
+    public function getDescription(): string
+    {
+        return parent::getDescription() . ', ' . $this->extra;
+    }
 }

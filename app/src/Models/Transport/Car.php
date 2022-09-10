@@ -13,4 +13,9 @@ class Car extends BaseCar
         parent::__construct($baseCarDTO);
         $this->passengerSeatsCount = $passengerSeatsCount;
     }
+
+    public function getDescription(): string
+    {
+        return parent::getDescription() . ', ' . $this->passengerSeatsCount;
+    }
 }

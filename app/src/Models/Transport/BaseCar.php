@@ -23,4 +23,9 @@ class BaseCar
     {
 
     }
+
+    public function getDescription(): string
+    {
+        return $this->carType . ', ' . $this->brand . ', ' . $this->photoFileName . ', ' . $this->carrying;
+    }
 }
