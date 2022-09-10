@@ -1,8 +1,7 @@
 <?php
 
+use Mar4ehk0\Service\Config;
+
 require __DIR__ . '/../vendor/autoload.php';
 
-// config
-
-//$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-//$dotenv->load();
+Config::initasdasd();

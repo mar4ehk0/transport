@@ -1,22 +1,33 @@
 {
-  "name": "mar4ehk0/test-cars",
-  "description": "Implements test cars",
-  "authors": [
-    {
-      "name": "Alex Marchenko",
-      "email": "mar4ehk0@gmail.com"
-    }
-  ],
-  "require": {
-    "php": "^8.1",
-    "ext-json": "*",
-    "ext-curl": "*",
-    "ext-redis": "*",
-    "vlucas/phpdotenv": "^5.4"
-  },
-  "autoload": {
-    "psr-4": {
-      "Mar4ehk0\\": "src/"
-    }
-  }
+    "name": "mar4ehk0/module-loader",
+    "description": "Loads modules",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Marchenko",
+            "email": "mar4ehk0@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mar4ehk0\\": "src/"
+        },
+        "files": [
+            "helpers/functions.php"
+        ]
+    },
+    "autoload-dev": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "scripts": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
