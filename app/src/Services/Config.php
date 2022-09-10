@@ -1,6 +1,6 @@
 <?php
 
-namespace Mar4ehk0\Service;
+namespace Mar4ehk0\Services;
 
 use Dotenv\Dotenv;
 
@@ -12,7 +12,7 @@ class Config
     private function __construct() { }
     private function __clone() { }
 
-    public static function init(string $pathConfig = '')
+    public static function init(string $pathConfig = ''): ?Config
     {
 
         if (!is_null(self::$instance)) {
