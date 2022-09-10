@@ -6,6 +6,7 @@ use Mar4ehk0\Factories\AppCreator;
 use Mar4ehk0\Factories\File;
 use Mar4ehk0\Factories\Parser;
 use Mar4ehk0\Services\TransportCreator;
+use Mar4ehk0\Services\View;
 use SplFileObject;
 
 class App
@@ -28,7 +29,8 @@ class App
 
     public function run(): void
     {
-        $this->parser->getCarList($this->file);
+        $result = $this->parser->getCarList($this->file);
+        View::showCollection($result);
     }
 
     private function getParam(): array
