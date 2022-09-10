@@ -20,7 +20,7 @@ class App
         $param = $this->getParam();
         (new AppValidator($param))->validate();
 
-        $file = $this->getFile($param['f']);
+        $file = $this->getFile((string)$param['f']);
 
         $factory = AppCreator::getFactory($file->getExtension());
         $this->file = $factory->createFile($file);
