@@ -1,0 +1,22 @@
+{
+  "name": "mar4ehk0/test-cars",
+  "description": "Implements test cars",
+  "authors": [
+    {
+      "name": "Alex Marchenko",
+      "email": "mar4ehk0@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-redis": "*",
+    "vlucas/phpdotenv": "^5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mar4ehk0\\": "src/"
+    }
+  }
+}

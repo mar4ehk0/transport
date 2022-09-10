@@ -1,0 +1,5 @@
+/app/vendor
+.env
+.phpunit.result.cache
+.idea
+.vscode

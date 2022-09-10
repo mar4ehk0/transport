@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  application:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+      target: develop-runtime
+      args:
+        - "DOCKER_USER"
+        - "DOCKER_GROUP_NAME"
+        - "DOCKER_USER_UID"
+        - "DOCKER_USER_GID"
+        - "SRC_PATH"
+    environment:
+      - "DOCKER_USER_UID"
+      - "DOCKER_USER_GID"
+      - "DOCKER_GROUP_NAME"
+      - "SRC_PATH"
+    volumes:
+      - ./app:${SRC_PATH}:rw
