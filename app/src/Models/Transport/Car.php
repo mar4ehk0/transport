@@ -1,6 +1,6 @@
 <?php
 
-namespace Mar4ehk0\Models;
+namespace Mar4ehk0\Models\Transport;
 
 use Mar4ehk0\DTO\BaseCarDTO;
 
