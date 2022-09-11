@@ -12,7 +12,6 @@ use Mar4ehk0\Models\Transport\Types;
 
 class TransportCreator
 {
-
     public function create(array $item): ?BaseCar
     {
         if (!array_is_list($item)) {

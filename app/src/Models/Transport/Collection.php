@@ -4,7 +4,6 @@ namespace Mar4ehk0\Models\Transport;
 
 class Collection implements \Iterator
 {
-
     private int $pointer = 0;
     private int $total = 0;
 

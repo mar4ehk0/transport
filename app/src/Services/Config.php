@@ -9,8 +9,12 @@ class Config
     private static ?Config $instance = null;
     private static array $options;
 
-    private function __construct() { }
-    private function __clone() { }
+    private function __construct()
+    {
+    }
+    private function __clone()
+    {
+    }
 
     public static function init(string $pathConfig = ''): ?Config
     {
@@ -43,6 +47,4 @@ class Config
             View::showMessage($exception->getMessage());
         }
     }
-
-
 }

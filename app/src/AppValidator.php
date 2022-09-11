@@ -4,7 +4,6 @@ namespace Mar4ehk0;
 
 class AppValidator
 {
-
     public function __construct(private array $options)
     {
     }

@@ -7,7 +7,6 @@ use SplFileObject;
 
 class CsvFile implements File
 {
-
     public function __construct(private SplFileObject $fileObject)
     {
         $this->fileObject->setFlags(SplFileObject::SKIP_EMPTY);

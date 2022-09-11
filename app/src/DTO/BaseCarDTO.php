@@ -11,5 +11,4 @@ class BaseCarDTO
         public readonly float $carrying,
     ) {
     }
-
 }

@@ -7,7 +7,6 @@ use Mar4ehk0\Services\TransportCreator;
 
 abstract class Parser
 {
-
     protected Collection $collection;
 
     public function __construct(private TransportCreator $transportCreator)

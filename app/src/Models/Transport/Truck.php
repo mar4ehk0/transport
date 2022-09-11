@@ -28,6 +28,4 @@ class Truck extends BaseCar
     {
         return parent::getDescription() . ', ' . $this->length . 'x' . $this->width . 'x' . $this->height;
     }
-
-
 }

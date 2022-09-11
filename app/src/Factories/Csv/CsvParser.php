@@ -8,7 +8,6 @@ use Mar4ehk0\Models\Transport\Collection;
 
 class CsvParser extends Parser
 {
-
     protected function do(File $file): int
     {
         $generator = $this->createGenerator($file);
@@ -22,7 +21,7 @@ class CsvParser extends Parser
         foreach ($generator as $item) {
             if ($row !== 0) {
                 if ($this->isValidRow($collNumValid, $item)) {
-                   $this->createTransport($item);
+                    $this->createTransport($item);
                 }
             }
             $row++;

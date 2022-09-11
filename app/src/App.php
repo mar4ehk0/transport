@@ -11,7 +11,6 @@ use SplFileObject;
 
 class App
 {
-
     private File $file;
     private Parser $parser;
 
@@ -42,5 +41,4 @@ class App
     {
         return new SplFileObject($filePath);
     }
-
 }

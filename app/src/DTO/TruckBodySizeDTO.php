@@ -8,7 +8,6 @@ class TruckBodySizeDTO
         public readonly float $length,
         public readonly float $width,
         public readonly float $height,
-    )
-    {
+    ) {
     }
 }

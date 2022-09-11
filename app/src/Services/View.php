@@ -21,5 +21,4 @@ class View
     {
         echo $msg . PHP_EOL;
     }
-
 }
