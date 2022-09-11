@@ -36,8 +36,7 @@ class TransportCreator
             if ($item[0] === Types::SpecMachine->value) {
                 return $this->createSpecMachine($baseCarDTO, $item);
             }
-        }
-        catch (Exception $exception) {
+        } catch (Exception $exception) {
         }
 
         return null;
