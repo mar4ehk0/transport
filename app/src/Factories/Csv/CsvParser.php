@@ -4,7 +4,6 @@ namespace Mar4ehk0\Factories\Csv;
 
 use Mar4ehk0\Factories\File;
 use Mar4ehk0\Factories\Parser;
-use Mar4ehk0\Models\Transport\Collection;
 
 class CsvParser extends Parser
 {
