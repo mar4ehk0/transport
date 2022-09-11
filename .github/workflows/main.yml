@@ -22,4 +22,4 @@ jobs:
 
     - name: Run Code Sniffer
       working-directory: ./app
-      run: ./vendor/bin/phpbf
+      run: ./vendor/bin/phpcbf
