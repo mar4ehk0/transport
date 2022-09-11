@@ -9,6 +9,7 @@ use Mar4ehk0\Models\Transport\Car;
 use Mar4ehk0\Models\Transport\SpecMachine;
 use Mar4ehk0\Models\Transport\Truck;
 use Mar4ehk0\Models\Transport\Types;
+use Exception;
 
 class TransportCreator
 {
@@ -18,21 +19,25 @@ class TransportCreator
             return null;
         }
 
-        $baseCarDTO = new BaseCarDTO(
-            (string)$item[0],
-            (string)$item[1],
-            (string)$item[3],
-            (float)$item[5]
-        );
+        try {
+            $baseCarDTO = new BaseCarDTO(
+                (string)$item[0],
+                (string)$item[1],
+                (string)$item[3],
+                (float)$item[5]
+            );
 
-        if ($item[0] === Types::Car->value) {
-            return $this->createCar($baseCarDTO, $item);
+            if ($item[0] === Types::Car->value) {
+                return $this->createCar($baseCarDTO, $item);
+            }
+            if ($item[0] === Types::Truck->value) {
+                return $this->createTruck($baseCarDTO, $item);
+            }
+            if ($item[0] === Types::SpecMachine->value) {
+                return $this->createSpecMachine($baseCarDTO, $item);
+            }
         }
-        if ($item[0] === Types::Truck->value) {
-            return $this->createTruck($baseCarDTO, $item);
-        }
-        if ($item[0] === Types::SpecMachine->value) {
-            return $this->createSpecMachine($baseCarDTO, $item);
+        catch (Exception $exception) {
         }
 
         return null;
