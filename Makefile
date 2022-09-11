@@ -38,6 +38,12 @@ init: ## Make full application initialization
 	docker compose exec application composer install --ansi --prefer-dist
 	@$(MAKE) --no-print-directory up
 
+.PHONY: run
+run: ## Make important task
+	@$(MAKE) --no-print-directory init
+	$(shell cp $(FILENAME) ./app/$(FILENAME))
+	docker compose exec application php public/index.php -f $(FILENAME)
+
 .PHONY: up
 up: ## Create and start containers
 	docker compose up -d --remove-orphans
