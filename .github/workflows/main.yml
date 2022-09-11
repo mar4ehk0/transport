@@ -20,6 +20,7 @@ jobs:
       working-directory: ./app
       run: composer install --prefer-dist --no-progress
 
-    - name: Run Code Sniffer
+    - name: Run PSALM
       working-directory: ./app
-      run: ./vendor/bin/phpcbf
+      run: ./vendor/bin/psalm
+

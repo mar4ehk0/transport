@@ -2,6 +2,8 @@
 
 namespace Mar4ehk0\Models\Transport;
 
+use RuntimeException;
+
 class Collection implements \Iterator
 {
     private int $pointer = 0;
@@ -24,9 +26,14 @@ class Collection implements \Iterator
         return $this->objects[$num];
     }
 
-    public function current(): ?BaseCar
+    public function current(): BaseCar
     {
-        return $this->getRow($this->pointer);
+        $result = $this->getRow($this->pointer);
+        if ($result) {
+            return $result;
+        }
+
+        throw new RuntimeException('Item does not exist.');
     }
 
     public function next(): void
@@ -41,7 +48,7 @@ class Collection implements \Iterator
 
     public function valid(): bool
     {
-        return (!is_null($this->current()));
+        return (!is_null($this->getRow($this->pointer)));
     }
 
     public function rewind(): void
